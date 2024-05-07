@@ -56,7 +56,7 @@ public sealed record OptionsWithChildWithRequiredField
 public sealed record ChildOptionsWithRequiredField
 {
     [Required]
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable. - Workaround for bug in Configuration Binding Generator.
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable. - Workaround for https://github.com/dotnet/runtime/issues/101984.
     public /*required*/ string RequiredField { get; set; }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 }
